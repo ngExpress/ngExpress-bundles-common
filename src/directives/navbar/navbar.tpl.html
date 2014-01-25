@@ -1,0 +1,7 @@
+    <nav class="navbar navbar-default" role="navigation" ng-show="routes.length > 0">
+        <ul class="nav navbar-nav">
+            <li ng-repeat="route in routes" ng-class="route.isActive() ? 'active':''">
+                <a ng-click="route.navigate()">{{route.name}}</a>
+            </li>
+        </ul>
+    </nav>
