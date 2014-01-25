@@ -1,0 +1,8 @@
+<ol class="breadcrumb" ng-show="breadcrumbs.length > 0">
+    <li ng-repeat="breadcrumb in breadcrumbs" ng-class="breadcrumb.active ? 'active':''">
+        <span ng-if="breadcrumb.active">{{ breadcrumb.name | uppercase }}</span>
+        <a ng-if="!breadcrumb.active" ng-click="navigate(breadcrumb.path)">
+            <span>{{ breadcrumb.name | uppercase }}</span>
+        </a>
+    </li>
+</ol>
